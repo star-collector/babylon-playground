@@ -34,7 +34,7 @@ export const NativeEngine: FunctionComponent<BaseProps> = ({ camera, children, l
           <ActivityIndicator size="large" color="#4A84EE" />
         </View>
       )}
-      <EngineView camera={loading ? camera : undefined} style={styles.engine}/>
+      <EngineView displayFrameRate camera={loading ? camera : undefined} style={styles.engine} />
       {(engine) && (
         <EngineCanvasContext.Provider value={{ engine, canvas: null }}>
           {children}

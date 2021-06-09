@@ -77,6 +77,22 @@ export class Character extends PureComponent<ViewProps, State> {
                   radius={5}
                   target={new Vector3(-19, 5, 19)}
                 />
+                <directionalLight
+                  autoUpdateExtends={false}
+                  disposeInstanceOnUnmount
+                  name="directionalLight"
+                  intensity={0.5}
+                  direction={new Vector3(0, -0.5, 0.5)}
+                  position={new Vector3(0, 10, -20)}
+                />
+                <directionalLight
+                  autoUpdateExtends={false}
+                  disposeInstanceOnUnmount
+                  name="directionalLight"
+                  intensity={0.5}
+                  direction={new Vector3(0, -0.5, 0.5)}
+                  position={new Vector3(0, 10, -20)}
+                />
                 <hemisphericLight disposeInstanceOnUnmount name="light" intensity={1.5} direction={Vector3.Up()} />
                 <Suspense fallback={null}>
                   <Girl
@@ -86,7 +102,7 @@ export class Character extends PureComponent<ViewProps, State> {
                   />
                   <Room
                     position={new Vector3(0, 0, 0)}
-                    scaling={new Vector3(20, 20, 20)}
+                    scaling={new Vector3(0.2, 0.2, 0.2)}
                   />
                   <SkyBox size={100} />
                 </Suspense>
