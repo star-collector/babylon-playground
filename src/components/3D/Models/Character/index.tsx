@@ -69,31 +69,19 @@ export class Character extends PureComponent<ViewProps, State> {
             >
               <Scene disposeInstanceOnUnmount onNewCameraAddedObservable={this.onActiveCameraChanged}>
                 <arcRotateCamera
-                  alpha={Math.PI / 1.99}
+                  alpha={Math.PI / 2}
                   beta={Math.PI / 2.2}
-                  disposeInstanceOnUnmount
                   fov={1.05}
                   name="camera"
                   radius={5}
-                  target={new Vector3(-19, 5, 19)}
+                  target={new Vector3(-19, 5.4, 19)}
                 />
-                <directionalLight
-                  autoUpdateExtends={false}
+                <hemisphericLight
+                  direction={new Vector3(1, 3, 0)}
                   disposeInstanceOnUnmount
-                  name="directionalLight"
-                  intensity={0.5}
-                  direction={new Vector3(0, -0.5, 0.5)}
-                  position={new Vector3(0, 10, -20)}
+                  name="hemisphericLight"
+                  intensity={1.5}
                 />
-                <directionalLight
-                  autoUpdateExtends={false}
-                  disposeInstanceOnUnmount
-                  name="directionalLight"
-                  intensity={0.5}
-                  direction={new Vector3(0, -0.5, 0.5)}
-                  position={new Vector3(0, 10, -20)}
-                />
-                <hemisphericLight disposeInstanceOnUnmount name="light" intensity={1.5} direction={Vector3.Up()} />
                 <Suspense fallback={null}>
                   <Girl
                     onCreated={this.onCharacterCreated}
@@ -102,9 +90,9 @@ export class Character extends PureComponent<ViewProps, State> {
                   />
                   <Room
                     position={new Vector3(0, 0, 0)}
-                    scaling={new Vector3(0.2, 0.2, 0.2)}
+                    scaling={new Vector3(2, 2, 2)}
                   />
-                  <SkyBox size={100} />
+                  {/*<SkyBox size={100} />*/}
                 </Suspense>
               </Scene>
             </NativeEngine>
