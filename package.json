@@ -13,10 +13,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@babylonjs/core": "^5.0.0-alpha.31",
-    "@babylonjs/gui": "^5.0.0-alpha.31",
-    "@babylonjs/loaders": "^5.0.0-alpha.31",
-    "@babylonjs/react-native": "^0.4.0-alpha.24",
+    "@babylonjs/core": "^5.0.0-alpha.35",
+    "@babylonjs/gui": "^5.0.0-alpha.35",
+    "@babylonjs/loaders": "^5.0.0-alpha.35",
+    "@babylonjs/react-native": "^0.4.0-alpha.27",
     "@react-native-community/slider": "4.0.0-rc.3",
     "logkitty": "^0.7.1",
     "metro-config": "^0.66.1",
