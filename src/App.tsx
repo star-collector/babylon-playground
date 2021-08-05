@@ -1,7 +1,7 @@
-import React, { useState, FunctionComponent, useEffect } from 'react';
-import { SafeAreaView, View, ViewProps } from 'react-native';
+import React, {useState, FunctionComponent, useEffect} from 'react';
+import {SafeAreaView, View, ViewProps} from 'react-native';
 
-import { EngineView, useEngine } from '@babylonjs/react-native';
+import {EngineView, useEngine} from '@babylonjs/react-native';
 import {
   Color3,
   Scene,
@@ -11,13 +11,18 @@ import {
   SceneLoader,
   TransformNode,
   HighlightLayer,
-  Mesh, DeviceSourceManager, PointerInput, Nullable, DeviceType, DeviceSource,
-} from "@babylonjs/core";
+  Mesh,
+  DeviceSourceManager,
+  PointerInput,
+  Nullable,
+  DeviceType,
+  DeviceSource,
+} from '@babylonjs/core';
 import '@babylonjs/loaders/glTF';
 
 import character from './assets/models/base/blond.glb';
 import room from './assets/models/room/room_parts.glb';
-import { resolveInnerAsset } from './utils';
+import {resolveInnerAsset} from './utils';
 
 const characterModel = resolveInnerAsset(character);
 const roomModel = resolveInnerAsset(room);
@@ -38,24 +43,50 @@ const EngineScreen: FunctionComponent<ViewProps> = (props: ViewProps) => {
       rootNode.position = new Vector3(0, 0, 0);
 
       const deviceSourceManager = new DeviceSourceManager(engine);
-      const handlePointerInput = (inputIndex: PointerInput, previousState: Nullable<number>, currentState: Nullable<number>) => {
-        if (inputIndex === PointerInput.Horizontal &&
-          currentState && previousState) {
-          rootNode.rotate(Vector3.Down(), (currentState - previousState) * 0.005);
+      const handlePointerInput = (
+        inputIndex: PointerInput,
+        previousState: Nullable<number>,
+        currentState: Nullable<number>,
+      ) => {
+        if (
+          inputIndex === PointerInput.Horizontal &&
+          currentState &&
+          previousState
+        ) {
+          rootNode.rotate(
+            Vector3.Down(),
+            (currentState - previousState) * 0.005,
+          );
         }
       };
 
-      deviceSourceManager.onDeviceConnectedObservable.add(device => {
+      deviceSourceManager.onDeviceConnectedObservable.add((device) => {
         if (device.deviceType === DeviceType.Touch) {
-          const touch: DeviceSource<DeviceType.Touch> = deviceSourceManager.getDeviceSource(device.deviceType, device.deviceSlot)!;
-          touch.onInputChangedObservable.add(touchEvent => {
-            handlePointerInput(touchEvent.inputIndex, touchEvent.previousState, touchEvent.currentState);
+          const touch: DeviceSource<DeviceType.Touch> =
+            deviceSourceManager.getDeviceSource(
+              device.deviceType,
+              device.deviceSlot,
+            )!;
+          touch.onInputChangedObservable.add((touchEvent) => {
+            handlePointerInput(
+              touchEvent.inputIndex,
+              touchEvent.previousState,
+              touchEvent.currentState,
+            );
           });
         } else if (device.deviceType === DeviceType.Mouse) {
-          const mouse: DeviceSource<DeviceType.Mouse> = deviceSourceManager.getDeviceSource(device.deviceType, device.deviceSlot)!;
-          mouse.onInputChangedObservable.add(mouseEvent => {
+          const mouse: DeviceSource<DeviceType.Mouse> =
+            deviceSourceManager.getDeviceSource(
+              device.deviceType,
+              device.deviceSlot,
+            )!;
+          mouse.onInputChangedObservable.add((mouseEvent) => {
             if (mouse.getInput(PointerInput.LeftClick)) {
-              handlePointerInput(mouseEvent.inputIndex, mouseEvent.previousState, mouseEvent.currentState);
+              handlePointerInput(
+                mouseEvent.inputIndex,
+                mouseEvent.previousState,
+                mouseEvent.currentState,
+              );
             }
           });
         }
@@ -73,9 +104,7 @@ const EngineScreen: FunctionComponent<ViewProps> = (props: ViewProps) => {
         SceneLoader.ImportMeshAsync('', path).then((result) => {
           const mesh = result.meshes[0];
           mesh.parent = transformContainer;
-          console.log('MESH LOADED', mesh.name);
-          mesh.getChildMeshes().forEach((mesh: Mesh) => {
-            console.log('NN', mesh.name);
+          mesh.getChildMeshes().forEach((mesh) => {
             highlight.addMesh(mesh as Mesh, Color3.Teal());
           });
         });
