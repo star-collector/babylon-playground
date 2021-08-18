@@ -20,7 +20,7 @@ import {
 } from '@babylonjs/core';
 import '@babylonjs/loaders/glTF';
 
-import character from './assets/models/base/blond.glb';
+import character from './assets/models/base/male.glb';
 import room from './assets/models/room/room_parts.glb';
 import {resolveInnerAsset} from './utils';
 
