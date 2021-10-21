@@ -11,9 +11,9 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@babylonjs/core": "5.0.0-alpha.34",
-    "@babylonjs/loaders": "5.0.0-alpha.34",
-    "@babylonjs/react-native": "0.4.0-alpha.29",
+    "@babylonjs/core": "5.0.0-alpha.57",
+    "@babylonjs/loaders": "5.0.0-alpha.57",
+    "@babylonjs/react-native": "0.4.0-alpha.37",
     "logkitty": "^0.7.1",
     "metro-config": "^0.66.2",
     "react": "^17.0.1",

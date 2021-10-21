@@ -740,26 +740,26 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@babylonjs/core@5.0.0-alpha.34":
-  version "5.0.0-alpha.34"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.0.0-alpha.34.tgz#872fc90fb8d7762d5de90f7a7d1b3ecdcd32adbd"
-  integrity sha512-cBxaLT+HmkVRBPG5FewMfUtGKEsXwZzB9n/JTxnzA/ohuDR5vLzwQ9tR2hOlFYococDWsJHJok0WAq1FWfEt+Q==
+"@babylonjs/core@5.0.0-alpha.57":
+  version "5.0.0-alpha.57"
+  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.0.0-alpha.57.tgz#8a47c9ec4b1f111f9a5242ff925ea04ecad639c9"
+  integrity sha512-v2uu7k4uw9JpulVG6q50rdaQ4azlbrwqaePtCygx3et5skHrYrQXZyUNnxJVJSNAxaV9vAWRHTLsgd74ENKLKg==
   dependencies:
-    tslib "^2.1.0"
+    tslib "^2.3.1"
 
-"@babylonjs/loaders@5.0.0-alpha.34":
-  version "5.0.0-alpha.34"
-  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.0.0-alpha.34.tgz#265ac0910923ce0969f811b71e6b7dc620b4b8d4"
-  integrity sha512-y/OWpykDO63WTPbPXylmT0R8XIGvZAG5fgtSE72LLDzF6M2LtTCnX3HiTEMVX1GPlyQzuslEFjtUsS3qgFYRFw==
+"@babylonjs/loaders@5.0.0-alpha.57":
+  version "5.0.0-alpha.57"
+  resolved "https://registry.yarnpkg.com/@babylonjs/loaders/-/loaders-5.0.0-alpha.57.tgz#027a24e22f0a0e63c70f4780d396ca9f1715f722"
+  integrity sha512-vPPhLZH7mFqwK4plxCgc6SmhggKwj70rsiMMJdp2oIr0oW8/jg8KMuceHt0PO0fyvqaZ4guwk4Zj8uvWPCIVeA==
   dependencies:
-    "@babylonjs/core" "5.0.0-alpha.34"
-    babylonjs-gltf2interface "5.0.0-alpha.34"
-    tslib "^2.1.0"
+    "@babylonjs/core" "5.0.0-alpha.57"
+    babylonjs-gltf2interface "5.0.0-alpha.57"
+    tslib "^2.3.1"
 
-"@babylonjs/react-native@0.4.0-alpha.29":
-  version "0.4.0-alpha.29"
-  resolved "https://registry.yarnpkg.com/@babylonjs/react-native/-/react-native-0.4.0-alpha.29.tgz#c994573ae27e08f1b921f76c16ec5a01f3eeb2f2"
-  integrity sha512-z9LEigKkFlxNtK9t9TwX/BxCGEVVr8qok7m3hKuNXCeP2OL4J4/MCCjV+sQUSLIWovQgNzr1T7jTd1agP9maPQ==
+"@babylonjs/react-native@0.4.0-alpha.37":
+  version "0.4.0-alpha.37"
+  resolved "https://registry.yarnpkg.com/@babylonjs/react-native/-/react-native-0.4.0-alpha.37.tgz#24b9f9d12d0cbd68da6da651574b570ade3ecc2c"
+  integrity sha512-2DC6waCOv3lUeJ4KOao/+e9Ndew4K2sck/85WuSyz+IN1kH5LNpxUavrzrgpflPc1VL0AzE5Z6JIpUKq4h9sYg==
   dependencies:
     base-64 "^0.1.0"
     semver "^7.3.2"
@@ -1874,10 +1874,10 @@ babel-preset-jest@^27.0.6:
     babel-plugin-jest-hoist "^27.0.6"
     babel-preset-current-node-syntax "^1.0.0"
 
-babylonjs-gltf2interface@5.0.0-alpha.34:
-  version "5.0.0-alpha.34"
-  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.0.0-alpha.34.tgz#bcc589c95c5265fa6192e266ff5487f0f6a8c1bc"
-  integrity sha512-BqcvLlTvVsPtQsCp/PtL0uIpNrJ1oas00N7kP1Lk7eDd+PUchIF1gvC/XvPR7QH6WABIvTcbi7Fr931OyIyxsw==
+babylonjs-gltf2interface@5.0.0-alpha.57:
+  version "5.0.0-alpha.57"
+  resolved "https://registry.yarnpkg.com/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.0.0-alpha.57.tgz#8e80ae391431467ed53faaa96170a494b2bc04fb"
+  integrity sha512-uuiyLf5uMy/RPKVCaJDXlYUBKWqf17qgY5+GYiKQ2PH/eNXFh0pmmlgEoju5xik+3A6yTF1KbXbpxcbcm5vkPQ==
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -6731,10 +6731,15 @@ tslib@^1.8.1:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.1, tslib@^2.1.0:
+tslib@^2.0.1:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
+tslib@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
+  integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 tsutils@^3.21.0:
   version "3.21.0"
