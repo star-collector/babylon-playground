@@ -20,7 +20,7 @@ import {
 } from '@babylonjs/core';
 import '@babylonjs/loaders/glTF';
 
-import character from './assets/models/base/male.glb';
+import character from './assets/models/base/gamer.glb';
 import room from './assets/models/room/room_parts.glb';
 import {resolveInnerAsset} from './utils';
 
@@ -113,6 +113,7 @@ const EngineScreen: FunctionComponent<ViewProps> = (props: ViewProps) => {
         SceneLoader.ImportMeshAsync('', path).then((result) => {
           const mesh = result.meshes[0];
           mesh.parent = transformContainer;
+          mesh.scaling = new Vector3(0.1, 0.1, 0.1);
         });
       });
     }
